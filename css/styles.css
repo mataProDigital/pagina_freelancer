@@ -30,7 +30,7 @@ body{
 }
 
 .contenedor{
-  width: 120rem;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -40,11 +40,22 @@ body{
 }
 
 .navegacion-principal{
-  
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  
 }
+
+@media (min-width: 768px) {
+  .navegacion-principal{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
 .navegacion-principal a{
+  display: block;
+  text-align: center;
   padding: 1rem;
   color: var(--blanco);
   text-decoration: none;
@@ -57,9 +68,5 @@ body{
   color: var(--oscuro);
 }
 
-@media (min-width: 480px){
-  
-}
-@media (min-width: 768px){
 
-}
+
